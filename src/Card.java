@@ -8,6 +8,17 @@ public class Card {
 		this.cardValue = cardValue;
 	}
 
-	
+	public String getCardSuit() {
+		return cardSuit;
+	}
+	public void setCardSuit(String cardSuit) {
+		this.cardSuit = cardSuit;
+	}
+	public String getCardValue() {
+		return cardValue;
+	}
+	public void setCardValue(String cardValue) {
+		this.cardValue = cardValue;
+	}
 	
 }

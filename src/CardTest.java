@@ -13,5 +13,27 @@ public class CardTest {
 		assertEquals(suit, card.cardSuit);
 		assertEquals(value, card.cardValue);
 	}
+	
+	@Test
+	public void testGetCardSuit() {
+		assertEquals(suit, card.getCardSuit());
+	}
+
+	@Test
+	public void testSetCardSuit() {
+		card.setCardSuit("Club");
+		assertEquals("Club", card.cardSuit);
+	}
+
+	@Test
+	public void testGetCardValue() {
+		assertEquals(value, card.getCardValue());
+	}
+
+	@Test
+	public void testSetCardValue() {
+		card.setCardValue("King");
+		assertEquals("King", card.getCardValue());
+	}
 
 }
