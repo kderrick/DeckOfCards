@@ -17,9 +17,15 @@ public class CardDeck {
 	}
 	
 	public String drawTopCardFromDeck() {
+		String drawnCardInfo = "";
+		
+		if(deckOfCards.size() > 0) {
 		Card drawnCard = deckOfCards.get(0);
 		deckOfCards.remove(0);
-		String drawnCardInfo = drawnCard.getCardSuit() + "/" + drawnCard.getCardValue();
+		drawnCardInfo = drawnCard.getCardSuit() + "/" + drawnCard.getCardValue();
+		} else {
+			drawnCardInfo = "There are no cards left";
+		}
 		return drawnCardInfo;
 	}
 	

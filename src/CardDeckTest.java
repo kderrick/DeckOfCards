@@ -31,6 +31,16 @@ public class CardDeckTest {
 	}
 	
 	@Test
+	public void testDrawTopCardFromDeckWhen0CardsLeft() {
+		String zeroCardsLeftResponse;
+		for(int i = 0; i <= 52; i++) {
+			deck.drawTopCardFromDeck();
+		}
+		zeroCardsLeftResponse = deck.drawTopCardFromDeck();
+		assertEquals("There are no cards left", zeroCardsLeftResponse);
+	}
+	
+	@Test
 	public void testShuffleDeckUsingCollections() {
 		deck.shuffleDeckUsingCollections();
 		assertNotEquals(deck.drawTopCardFromDeck(), deck2.drawTopCardFromDeck());
