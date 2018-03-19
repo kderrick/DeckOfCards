@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CardDeck {
 	private static final String[] SUITS = {"Club", "Diamond", "Heart", "Spade"};
@@ -20,5 +21,9 @@ public class CardDeck {
 		deckOfCards.remove(0);
 		String drawnCardInfo = drawnCard.getCardSuit() + "/" + drawnCard.getCardValue();
 		return drawnCardInfo;
+	}
+	
+	public void shuffleDeckUsingCollections() {
+		Collections.shuffle(deckOfCards);
 	}
 }

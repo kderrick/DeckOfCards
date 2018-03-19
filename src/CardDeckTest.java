@@ -6,10 +6,12 @@ import org.junit.Test;
 public class CardDeckTest {
 
 	private CardDeck deck;
+	private CardDeck deck2;
 	
 	@Before
     public void setup() {
 		deck = new CardDeck();
+		deck2 = new CardDeck();
         
     }
 
@@ -26,5 +28,12 @@ public class CardDeckTest {
 	public void testDrawTopCardFromDeck() {
 		assertEquals("Club/Ace", deck.drawTopCardFromDeck());
 		assertEquals(51, deck.deckOfCards.size());
+	}
+	
+	@Test
+	public void testShuffleDeckUsingCollections() {
+		deck.shuffleDeckUsingCollections();
+		assertNotEquals(deck.drawTopCardFromDeck(), deck2.drawTopCardFromDeck());
+		
 	}
 }
