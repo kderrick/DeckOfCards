@@ -26,4 +26,14 @@ public class CardDeck {
 	public void shuffleDeckUsingCollections() {
 		Collections.shuffle(deckOfCards);
 	}
+	
+	public void shuffleDeckWithoutUsingCollections() {
+		for(int i = 0; i <= deckOfCards.size() -1 ; i++) {
+		int indexToShuffleCardTo = (int)Math.random()*(deckOfCards.size() -1);
+		Card cardBeingShuffled = deckOfCards.get(i);
+		deckOfCards.remove(i);
+		deckOfCards.add(indexToShuffleCardTo, cardBeingShuffled);
+		
+		}
+	}
 }

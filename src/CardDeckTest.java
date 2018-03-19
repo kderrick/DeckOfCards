@@ -36,4 +36,11 @@ public class CardDeckTest {
 		assertNotEquals(deck.drawTopCardFromDeck(), deck2.drawTopCardFromDeck());
 		
 	}
+	
+	@Test
+	public void testShuffleDeckWithoutUsingCollections() {
+		deck.shuffleDeckWithoutUsingCollections();
+		assertNotEquals(deck.drawTopCardFromDeck(), deck2.drawTopCardFromDeck());
+		
+	}
 }
