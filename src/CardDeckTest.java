@@ -21,4 +21,10 @@ public class CardDeckTest {
 		assertEquals("Ace", firstCardValue);
 	}
 
+	
+	@Test
+	public void testDrawTopCardFromDeck() {
+		assertEquals("Club/Ace", deck.drawTopCardFromDeck());
+		assertEquals(51, deck.deckOfCards.size());
+	}
 }

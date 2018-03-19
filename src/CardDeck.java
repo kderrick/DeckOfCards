@@ -14,4 +14,11 @@ public class CardDeck {
 			}
 		}	
 	}
+	
+	public String drawTopCardFromDeck() {
+		Card drawnCard = deckOfCards.get(0);
+		deckOfCards.remove(0);
+		String drawnCardInfo = drawnCard.getCardSuit() + "/" + drawnCard.getCardValue();
+		return drawnCardInfo;
+	}
 }
